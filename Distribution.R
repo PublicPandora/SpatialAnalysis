@@ -38,8 +38,8 @@ a05 <- 0.05 #유의수준
 z.quantile <- qnorm(1-alpha/2)
 #qnorm은 해당하는 표준화값 제시
 error.Z <- z.quantile*SE.Z
-CI.L.Z <- xbar-error.Z
-CI.U.Z <- xbar+error.Z 
+CI.L.Z <- Xbar-error.Z
+CI.U.Z <- Xbar+error.Z 
 
 #t값을 통한 신뢰구간 추정
 n <- 250
@@ -47,9 +47,11 @@ Xbar <- 1821
 sd <- 192
 SE <- sd/sqrt(n)
 a05 <- 0.05 #유의수준
-error.t <- qt(1-alpha/2, df=n-1)*SE.t
-CI.L.t <- xbar-error.t
-CI.U.t <- xbar+error.t
+error.t <- qt(1-alpha/2, df=n-1)*SE
+CI.L.t <- Xbar-error.t
+CI.U.t <- Xbar+error.t CI.L.t
+CI.U.t
+
 
 install.packages(“readxl”)
 library(readxl)
@@ -60,8 +62,8 @@ sd <- sd(ex3$En)
 SE <- sd/sqrt(n)
 a05 <- 0.05 #유의수준
 error.t <- qt(1-a05/2, df=n-1)*SE
-CI.L.t <- xbar-error.t
-CI.U.t <- xbar+error.t CI.L.t
+CI.L.t <- Xbar-error.t
+CI.U.t <- Xbar+error.t CI.L.t
 CI.U.t
 
 #일표본 T검정
