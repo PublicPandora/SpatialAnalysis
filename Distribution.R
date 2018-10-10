@@ -55,8 +55,8 @@ install.packages(“readxl”)
 library(readxl)
 ex3 <- read_xlsx("d:/data.xlsx", sheet = "Sheet1")
 n <- 250
-Xbar <- mean(ex55$En)
-sd <- sd(ex55$En)
+Xbar <- mean(ex3$En)
+sd <- sd(ex3$En)
 SE <- sd/sqrt(n)
 a05 <- 0.05 #유의수준
 error.t <- qt(1-a05/2, df=n-1)*SE
